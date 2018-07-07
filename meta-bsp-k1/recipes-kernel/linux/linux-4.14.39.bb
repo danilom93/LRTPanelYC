@@ -43,7 +43,7 @@ do_configure_prepend () {
 	install -m 0644 ${WORKDIR}/imx6qdl-cannon.dtsi ${WORKDIR}/linux-4.14.39/arch/arm/boot/dts/
 }
 
-FILES_kernel-dev += "/boot/*"
+FILES_${KERNEL_PACKAGE_NAME}-base += "/boot/*"
 
 do_install_append () {
 	install -d ${D}/boot/dtbs/4.14.39-rt27-cannon-automata
